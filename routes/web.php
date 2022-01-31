@@ -18,11 +18,14 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "nama" => "Dwi Fatima Azzahra",
         "email" => "3103120072@student.smktelkom-pwtsch.id",
         "gambar" => "DwiFatima.jpeg"
@@ -31,6 +34,8 @@ Route::get('/about', function () {
 });
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
 
